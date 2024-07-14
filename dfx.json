@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "ai_debugger": {
+      "type": "motoko",
+      "main": "src/icp_deburger/main.mo",
+      "build": "dfx build",
+      "candid": "src/ai_debugger/ai_debugger.did"
+    }
+  },
+  "defaults": {
+    "build": {
+      "output": "dist"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8800",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": [
+        "https://ic0.app"
+      ]
+    }
+  },
+  "version": 1
+}
+
